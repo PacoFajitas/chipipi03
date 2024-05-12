@@ -6,7 +6,7 @@
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 02:50:50 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/11 03:47:30 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/05/12 17:06:23 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 ClapTrap::ClapTrap()
 {
 	_name = "Bobi";
+	std::cout << "Default constructor called without name, default name will be: " << _name << std::endl;
 	_hp = 10;
 	_ep = 10;
 	_ad = 0;
@@ -22,13 +23,24 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
-	_name = name;
+	if (!name.empty())
+	{
+		std::cout << "Constructor called with name, name will be: " << name << std::endl;
+		_name = name;
+	}
+	else
+	{
+		std::cout << "Constructor called with name but name is empty, name will be: Bobo" << std::endl;
+		_name = "Bobo";
+	}
 	_hp = 10;
 	_ep = 10;
 	_ad = 0;
 }
 ClapTrap::~ClapTrap()
-{}
+{
+	std::cout << "Destuctor called for " << _name << std::endl;
+}
 void ClapTrap::attack(const std::string& target)
 {
 	if(this->_ep <= 0 || this->_hp <=0)

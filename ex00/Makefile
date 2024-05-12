@@ -6,7 +6,7 @@
 #    By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/11 02:44:06 by tfiguero          #+#    #+#              #
-#    Updated: 2024/05/11 03:38:37 by tfiguero         ###   ########.fr        #
+#    Updated: 2024/05/12 17:08:21 by tfiguero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,9 @@ $(OBJ_DIR)%.o: %.cpp
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
+	$(RM) -r $(OBJ_DIR)
 
 fclean: clean
-	$(RM) -r $(OBJ_DIR)
 	$(RM) $(NAME)
 
 re: fclean all

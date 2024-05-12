@@ -6,14 +6,15 @@
 #    By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/11 02:44:06 by tfiguero          #+#    #+#              #
-#    Updated: 2024/05/11 03:38:37 by tfiguero         ###   ########.fr        #
+#    Updated: 2024/05/12 17:11:29 by tfiguero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 SRC_FILES = main.cpp\
-			ClapTrap.cpp
+			ClapTrap.cpp\
+			ScavTrap.cpp
 			
 OBJ_DIR = objs/
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
@@ -40,9 +41,9 @@ $(OBJ_DIR)%.o: %.cpp
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
+	$(RM) -r $(OBJ_DIR)
 
 fclean: clean
-	$(RM) -r $(OBJ_DIR)
 	$(RM) $(NAME)
 
 re: fclean all

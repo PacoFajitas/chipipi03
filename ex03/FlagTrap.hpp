@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FlagTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 02:51:08 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/12 20:18:25 by tfiguero         ###   ########.fr       */
+/*   Created: 2024/05/12 18:24:59 by tfiguero          #+#    #+#             */
+/*   Updated: 2024/05/12 19:22:07 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FLAGTRAP_H
+# define FLAGTRAP_H
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class FlagTrap : public ClapTrap
 {
-	private:
-		std::string _name;
-		int	_hp;
-		int	_ep;
-		int	_ad;
 	public:
-	ClapTrap();
-	ClapTrap(std::string name);
-	ClapTrap(ClapTrap& old);
-	ClapTrap& operator=(ClapTrap old);
-	~ClapTrap();
-	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);		
+		FlagTrap();
+		FlagTrap(std::string name);
+		~FlagTrap();
+		void	highFivesGuys(void);
+			
 };
 #endif

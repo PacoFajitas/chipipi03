@@ -19,7 +19,7 @@ int	main (void)
 	ClapTrap b(nombre1);
 
 	a.attack(nombre1);
-	b.takeDamage(0);
+	b.takeDamage(10);
 	b.beRepaired(1);
 	
 }

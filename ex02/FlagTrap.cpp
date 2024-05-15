@@ -6,7 +6,7 @@
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 18:27:19 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/12 19:43:39 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:49:57 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,21 @@ FlagTrap::FlagTrap(std::string name)
 {
 	std::cout << "FlagTrap constructor with name called, name of the trap will be: "<< name << std::endl;
 	_name = name;
+}
+FlagTrap::FlagTrap(FlagTrap& old)
+{
+	*this = old;
+	std::cout << "Copy constructor called " << std::endl;	
+}
+
+FlagTrap& FlagTrap::operator=(FlagTrap old)
+{
+	this->_ad = old._ad;
+	this->_ep = old._ep;
+	this->_hp  = old._hp;
+	this->_name = old._name;
+	std::cout << "ClapTrap Override operator = called" << std::endl;
+	return(*this);
 }
 FlagTrap::~FlagTrap()
 {

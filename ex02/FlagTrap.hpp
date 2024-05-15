@@ -6,7 +6,7 @@
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 18:24:59 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/12 19:22:07 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:49:17 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class FlagTrap : public ClapTrap
 	public:
 		FlagTrap();
 		FlagTrap(std::string name);
+		FlagTrap(FlagTrap& old);
+		FlagTrap& operator=(FlagTrap old);
 		~FlagTrap();
 		void	highFivesGuys(void);
 			

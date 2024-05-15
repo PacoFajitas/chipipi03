@@ -6,7 +6,7 @@
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 17:09:40 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/12 18:00:45 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:47:23 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,20 @@ ScavTrap::ScavTrap(std::string name)
 {
 	std::cout << "ScavTrap constructor called with name: " << name << std::endl;
 	_name = name;
+}
+ScavTrap::ScavTrap(ScavTrap& old)
+{
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+	*this = old;
+}
+ScavTrap& ScavTrap::operator=(ScavTrap old)
+{
+	this->_ad = old._ad;
+	this->_ep = old._ep;
+	this->_hp  = old._hp;
+	this->_name = old._name;
+	std::cout << "ScavTrap Override operator = called" << std::endl;
+	return(*this);
 }
 ScavTrap::~ScavTrap()
 {

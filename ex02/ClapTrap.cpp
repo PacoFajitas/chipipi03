@@ -6,7 +6,7 @@
 /*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 02:50:50 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/12 20:19:25 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:49:39 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,21 @@ ClapTrap::ClapTrap(std::string name)
 	_hp = 10;
 	_ep = 10;
 	_ad = 0;
+}
+ClapTrap::ClapTrap(ClapTrap& old)
+{
+	*this = old;
+	std::cout << "Copy constructor called " << std::endl;	
+}
+
+ClapTrap& ClapTrap::operator=(ClapTrap old)
+{
+	this->_ad = old._ad;
+	this->_ep = old._ep;
+	this->_hp  = old._hp;
+	this->_name = old._name;
+	std::cout << "ClapTrap Override operator = called" << std::endl;
+	return(*this);
 }
 ClapTrap::~ClapTrap()
 {

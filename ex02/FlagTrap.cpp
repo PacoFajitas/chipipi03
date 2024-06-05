@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FlagTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tfiguero < tfiguero@student.42barcelona    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 18:27:19 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/15 18:49:57 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:22:41 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ FlagTrap::FlagTrap(FlagTrap& old)
 	std::cout << "Copy constructor called " << std::endl;	
 }
 
-FlagTrap& FlagTrap::operator=(FlagTrap old)
+FlagTrap& FlagTrap::operator=(FlagTrap& old)
 {
 	this->_ad = old._ad;
 	this->_ep = old._ep;

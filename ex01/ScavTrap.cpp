@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tfiguero < tfiguero@student.42barcelona    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 17:09:40 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/15 18:47:23 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:21:09 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ ScavTrap::ScavTrap(ScavTrap& old)
 	std::cout << "ScavTrap copy constructor called" << std::endl;
 	*this = old;
 }
-ScavTrap& ScavTrap::operator=(ScavTrap old)
+ScavTrap& ScavTrap::operator=(ScavTrap& old)
 {
 	this->_ad = old._ad;
 	this->_ep = old._ep;

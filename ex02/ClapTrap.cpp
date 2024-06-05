@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tfiguero < tfiguero@student.42barcelona    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 02:50:50 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/15 18:49:39 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:22:29 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap::ClapTrap(ClapTrap& old)
 	std::cout << "Copy constructor called " << std::endl;	
 }
 
-ClapTrap& ClapTrap::operator=(ClapTrap old)
+ClapTrap& ClapTrap::operator=(ClapTrap& old)
 {
 	this->_ad = old._ad;
 	this->_ep = old._ep;

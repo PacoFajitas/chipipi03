@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tfiguero < tfiguero@student.42barcelona    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 02:50:50 by tfiguero          #+#    #+#             */
-/*   Updated: 2024/05/15 18:44:02 by tfiguero         ###   ########.fr       */
+/*   Updated: 2024/06/05 19:18:48 by tfiguero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() : _name("Bobi")
 {
-	_name = "Bobi";
 	std::cout << "Default constructor called without name, default name will be: " << _name << std::endl;
 	_hp = 10;
 	_ep = 10;
@@ -37,17 +36,18 @@ ClapTrap::ClapTrap(std::string name)
 	_ep = 10;
 	_ad = 0;
 }
+
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Destuctor called for " << _name << std::endl;
 }
-ClapTrap::ClapTrap(ClapTrap& old)
+ClapTrap::ClapTrap(const ClapTrap& old)
 {
 	*this = old;
 	std::cout << "Copy constructor called " << std::endl;	
 }
 
-ClapTrap& ClapTrap::operator=(ClapTrap old)
+ClapTrap& ClapTrap::operator=(const ClapTrap &old)
 {
 	this->_ad = old._ad;
 	this->_ep = old._ep;

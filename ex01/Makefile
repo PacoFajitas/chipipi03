@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tfiguero <tfiguero@student.42.fr>          +#+  +:+       +#+         #
+#    By: tfiguero < tfiguero@student.42barcelona    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/11 02:44:06 by tfiguero          #+#    #+#              #
-#    Updated: 2024/05/12 17:11:29 by tfiguero         ###   ########.fr        #
+#    Updated: 2024/06/05 18:30:43 by tfiguero         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ DEP_FILES = $(SRC_FILES:.cpp=.d)
 DEPS = $(addprefix $(OBJ_DIR), $(DEP_FILES))
 
 CC = c++
-CFLAGS = -std=c++98 -Wall -Wextra -Werror -MMD
+CFLAGS = -std=c++98 -Wall -Wextra -Werror -MMD -fsanitize=address -g
 RM = rm -f
 INCLUDE = -I ./
 
